@@ -1,0 +1,22 @@
+# ADVES - meble metalowe
+
+> ADVES (Jarosław Pietrzak) z Dzierżoniowa dostarcza metalowe meble dla firm, szkół i placówek medycznych w całej Polsce: szafki BHP i skrytkowe, szafy aktowe i kartotekowe, meble medyczne, szkolne i warsztatowe, regały magazynowe, a także krzesła. Bez sklepu internetowego: każde zamówienie jest wyceniane indywidualnie na zapytanie lub telefonicznie. Produkty Express 72H są wysyłane w ciągu 72 godzin od potwierdzenia zamówienia.
+
+Kontakt: tel. 602 104 463, 691 581 010, 74 645 94 24, adves@adves.pl, ul. Orzechowa 5, 58-200 Dzierżoniów, NIP 882 139 19 51. Działa od 2018 roku. Płatność do 14 dni dla firm i instytucji.
+
+## Oferta
+- [Meble socjalne](https://disaster26.github.io/adves-koncepcja/meble-socjalne/): Szafki ubraniowe BHP, Szafki BHP typu L, Szafki skrytkowe, Szafy gospodarcze metalowe, Podstawy, ławki i akcesoria
+- [Meble biurowe](https://disaster26.github.io/adves-koncepcja/meble-biurowe/): Szafy aktowe z drzwiami skrzydłowymi, Szafy aktowe z drzwiami przesuwnymi, Szafy aktowe z drzwiami żaluzjowymi, Szafy aktowo-kartotekowe, Szafy na dokumenty niejawne, Szafy na plany i mapy, Szafy witrynowe
+- [Szafy kartotekowe](https://disaster26.github.io/adves-koncepcja/szafy-kartotekowe/): Szafy kartotekowe do kart osobowych, Szafy kartotekowe do kopert B5, Szafy do teczek zawieszkowych A4, Szafy kartotekowe format A4, Szafy kartotekowe format A5, Szafy kartotekowe format A6
+- [Meble medyczne](https://disaster26.github.io/adves-koncepcja/meble-medyczne/): Szafy medyczne, Szafy kartotekowe do kopert B5
+- [Meble szkolne](https://disaster26.github.io/adves-koncepcja/meble-szkolne/): Szafy skrytkowe szkolne i przedszkolne, Szafki ubraniowe do szatni, Wyposażenie szkół na zapytanie
+- [Krzesła](https://disaster26.github.io/adves-koncepcja/krzesla/): Krzesła do szkół i przedszkoli, Krzesła do biur i sal spotkań, Krzesła do zakładów pracy
+- [Meble warsztatowe](https://disaster26.github.io/adves-koncepcja/meble-warsztatowe/): Stoły warsztatowe 2-modułowe, Stoły warsztatowe 3-modułowe, Akcesoria do stołów warsztatowych, Szafki warsztatowe, Wózki warsztatowe, Szafy warsztatowe, Szafy komputerowe, Ścianki narzędziowe i akcesoria
+- [Regały magazynowe](https://disaster26.github.io/adves-koncepcja/regaly-magazynowe/): Regały półkowe, na dokumenty, Regały paletowe, Regały wspornikowe, Regały na szpule i bębny
+- [Rusztowania jezdne i pojemniki na piasek](https://disaster26.github.io/adves-koncepcja/rusztowania-jezdne/): Rusztowania jezdne, Pojemniki na piasek i sól
+
+## Poradnik
+- [Jak dobrać szafkę BHP do szatni pracowniczej](https://disaster26.github.io/adves-koncepcja/poradnik/jak-dobrac-szafke-bhp/): Ile komór, jaka szerokość, kiedy szafa typu L, jaki zamek i które dodatki naprawdę się przydają.
+- [Szafy na dokumenty a RODO: jak bezpiecznie przechowywać dane osobowe](https://disaster26.github.io/adves-koncepcja/poradnik/szafy-na-dokumenty-rodo/): RODO nie wskazuje konkretnej szafy, ale wymaga odpowiednich zabezpieczeń. Podpowiadamy, co to oznacza w praktyce.
+- [Szatnia w szkole i przedszkolu: szafki skrytkowe czy ubraniowe?](https://disaster26.github.io/adves-koncepcja/poradnik/szatnia-w-szkole/): Skrytkowe czy ubraniowe, jakie zamki, po co ławki i jak przygotować zamówienie do zapytania ofertowego.
+- [Pytania i odpowiedzi](https://disaster26.github.io/adves-koncepcja/poradnik/#pytania)

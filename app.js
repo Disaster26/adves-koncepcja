@@ -2,7 +2,7 @@
   var d=document, top=d.querySelector('.top');
   // naglowek po przewinieciu
   function sc(){ if(top) top.classList.toggle('sc', window.scrollY>8); }
-  addEventListener('scroll', sc, {passive:true}); sc();
+  addEventListener('scroll', sc, {passive:true}); requestAnimationFrame(sc);
   // menu mobilne
   var bur=d.querySelector('.burger');
   if(bur){
@@ -13,7 +13,7 @@
   }
   // aktywna pozycja menu
   var links={}; d.querySelectorAll('.menu a[href^="#"]').forEach(function(a){ links[a.getAttribute('href').slice(1)]=a; });
-  if('IntersectionObserver' in window){
+  if('IntersectionObserver' in window && d.body.classList.contains('dom')){
     var io=new IntersectionObserver(function(es){
       es.forEach(function(e){ if(e.isIntersecting){ for(var k in links) links[k].classList.toggle('on', k===e.target.id); } });
     }, {rootMargin:'-45% 0px -50% 0px'});
@@ -31,7 +31,7 @@
     }
     if(prev) prev.addEventListener('click', function(){ tor.scrollBy({left:-krok(), behavior:'smooth'}); });
     if(next) next.addEventListener('click', function(){ tor.scrollBy({left:krok(), behavior:'smooth'}); });
-    tor.addEventListener('scroll', stan, {passive:true}); addEventListener('resize', stan); stan();
+    tor.addEventListener('scroll', stan, {passive:true}); addEventListener('resize', stan); requestAnimationFrame(stan);
     var dn=false, x0=0, s0=0, ruch=false;
     tor.addEventListener('pointerdown', function(e){ if(e.pointerType!=='mouse') return; dn=true; ruch=false; x0=e.clientX; s0=tor.scrollLeft; });
     addEventListener('pointermove', function(e){ if(!dn) return; var dx=e.clientX-x0; if(Math.abs(dx)>5){ ruch=true; tor.classList.add('ciag'); } tor.scrollLeft=s0-dx; });
@@ -63,6 +63,13 @@
   // formularz pokazowy
   d.querySelectorAll('form.pokaz').forEach(function(f){
     f.addEventListener('submit', function(e){ e.preventDefault(); var m=f.querySelector('.msg'); if(m){ m.hidden=false; m.focus(); } });
+  });
+  // zapytanie o konkretny produkt: wpisuje nazwe do formularza
+  var ta=d.getElementById('f-wi');
+  d.addEventListener('click', function(e){
+    var a=e.target.closest('[data-zapytaj]'); if(!a||!ta) return;
+    ta.value='Proszę o wycenę: '+a.getAttribute('data-zapytaj')+'\nIlość: \nMiejsce dostawy: ';
+    setTimeout(function(){ try{ ta.focus({preventScroll:true}); }catch(_){ } }, 450);
   });
   d.querySelectorAll('.rok').forEach(function(s){ s.textContent=new Date().getFullYear(); });
 })();

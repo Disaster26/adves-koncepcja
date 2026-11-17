@@ -4,11 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Meble metalowe: szafy BHP, biurowe i warsztatowe | ADVES Dzierżoniów</title>
-<meta name="description" content="ADVES z Dzierżoniowa: metalowe szafy BHP, aktowe i kartotekowe, meble szkolne, medyczne i warsztatowe, regały i rusztowania. Express 72H, dostawa w całej Polsce. Tel. 602 104 463.">
+<title>Meble metalowe: szafy BHP, biurowe i szkolne | ADVES Dzierżoniów</title>
+<meta name="description" content="ADVES z Dzierżoniowa: metalowe szafy BHP, aktowe i kartotekowe, meble szkolne, medyczne i warsztatowe, regały. Wycena na zapytanie, Express 72H, dostawa w całej Polsce. Tel. 602 104 463.">
+<meta property="og:title" content="Meble metalowe: szafy BHP, biurowe i szkolne | ADVES Dzierżoniów">
+<meta property="og:description" content="ADVES z Dzierżoniowa: metalowe szafy BHP, aktowe i kartotekowe, meble szkolne, medyczne i warsztatowe, regały. Wycena na zapytanie, Express 72H, dostawa w całej Polsce. Tel. 602 104 463.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
 <meta name="theme-color" content="#ffbd4a">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/drzwi-1.webp" fetchpriority="high">
+<link rel="preload" as="image" href="img/drzwi-2.webp" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/archivo-rdzen.woff2" crossorigin>
 <style>
 @font-face{font-family:"Archivo";font-style:normal;font-weight:400 800;font-display:swap;src:url(fonts/archivo-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2026}
@@ -217,21 +221,125 @@ footer .logo small{color:#c3c6cb}
 .lb-x{top:10px;right:12px}.lb-p{left:12px;top:50%}.lb-n{right:12px;top:50%}
 body.lb-on{overflow:hidden}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* v2: hero z jednym glownym zdjeciem, katalog B2B, podstrony */
+.drzwi{grid-template-columns:1fr}
+.drzwi .d1{display:none}
+.drzwi .d2{object-position:50% 50%}
+@media (min-width:900px){.drzwi{grid-template-columns:1fr 1fr}.drzwi .d1{display:block}}
+.kat .karta{background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 var(--line);text-decoration:none;color:inherit;position:relative;transition:box-shadow .2s,transform .2s}
+.kat .karta:hover{box-shadow:0 0 0 2px var(--ink);transform:translateY(-2px)}
+.kat .karta:focus-visible{outline:3px solid #1f6feb;outline-offset:3px}
+.kat .fot.znak{display:flex;align-items:center;justify-content:center}
+.kat .fot.znak svg{width:46%;height:auto}
+.nowe{position:absolute;left:0;top:0;z-index:2;background:var(--ink);color:#fff;font-weight:800;font-size:.74rem;padding:6px 10px;border-radius:0 0 18px 0;line-height:1}
+.kat .dalej{display:block;margin-top:10px;font-weight:800;font-size:.86rem}
+.kat .dalej::after{content:" \2192"}
+.takze{margin-top:22px;color:var(--mut);font-size:.95rem}
+.takze a{font-weight:700;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--amber)}
+.btn.mini{min-height:44px;padding:0 16px;font-size:.9rem}
+.prod .btn.mini{margin-top:14px;width:100%}
+.prod .zn72{margin-right:8px}
+/* poradnik na glownej */
+.porady{display:grid;gap:clamp(14px,1.4vw,26px);grid-template-columns:1fr}
+@media (min-width:800px){.porady{grid-template-columns:repeat(3,1fr)}}
+.porada{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .2s}
+.porada:hover{box-shadow:0 0 0 2px var(--ink)}
+.porada .fot{position:relative;aspect-ratio:16/9;background:#fff;border-bottom:5px solid var(--amber)}
+.porada .fot img{position:absolute;inset:8%;width:84%;height:84%;object-fit:contain}
+.porada .tx{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.porada p{color:var(--mut);font-size:.95rem}
+.porada .dalej{margin-top:auto;font-weight:800;font-size:.92rem}
+.porada .dalej::after{content:" \2192"}
+.szary .porada{border-color:transparent}
+.link-wiecej{display:inline-block;margin-top:26px;font-weight:800;text-decoration:none;border-bottom:3px solid var(--amber)}
+/* naglowek podstrony */
+.ph{background:var(--g);padding:clamp(28px,4vw,70px) 0 clamp(40px,5vw,90px)}
+.ph .wrap{display:grid;gap:clamp(24px,4vw,70px);align-items:center}
+@media (min-width:900px){.ph .wrap{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}}
+.ph h1{font-size:clamp(32px,3.6vw,68px);max-width:20ch;text-wrap:balance}
+.ph .lead{margin-top:16px}
+.ph .akcje{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ph .btn.obw{color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.ph .btn.obw:hover{background:#fff}
+.ph figure{margin:0;background:#fff;border-radius:var(--r);border-bottom:6px solid var(--amber);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:6%}
+.ph figure img{max-height:100%;width:auto;object-fit:contain}
+.ph figure svg{width:44%;height:auto}
+@media (max-width:899px){.ph figure{aspect-ratio:16/9}}
+.okr{font-size:.86rem;color:var(--mut);margin-bottom:18px;display:flex;flex-wrap:wrap;gap:6px}
+.okr a{color:var(--ink);font-weight:700;text-decoration:none}
+.okr a:hover{text-decoration:underline}
+.okr span[aria-hidden]{color:#9aa0a6}
+/* lista podkategorii i produktow */
+.lista{border-bottom:1px solid var(--line)}
+.wiersz{display:grid;gap:10px 30px;padding:22px 0 22px 34px;border-top:1px solid var(--line);position:relative;align-items:center}
+.wiersz::before{content:"";position:absolute;left:0;top:30px;width:18px;height:8px;background:var(--amber);border-radius:0 0 0 8px}
+@media (min-width:800px){.wiersz{grid-template-columns:minmax(0,1fr) auto}}
+.wiersz p{color:var(--mut);margin-top:6px;font-size:.96rem}
+.wiersz .btn{justify-self:start}
+.grupa+.grupa{margin-top:clamp(36px,4vw,64px)}
+.grupa>h2{font-size:clamp(24px,2vw,36px);margin-bottom:16px}
+.tab{width:100%;border-collapse:collapse}
+.tab th{text-align:left;font-size:.82rem;color:var(--mut);font-weight:700;padding:0 12px 10px 0;border-bottom:2px solid var(--ink)}
+.tab td{padding:14px 12px 14px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+.tab td:last-child{text-align:right;padding-right:0}
+.tab .kod{font-weight:800;white-space:nowrap}
+.tab .zn72{display:inline-block;margin-left:8px;padding:3px 8px;background:var(--amber);font-weight:800;font-size:.74rem;border-radius:0 0 0 8px;vertical-align:middle;font-style:normal}
+@media (max-width:699px){
+  .tab thead{display:none}
+  .tab tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 0;border-bottom:1px solid var(--line)}
+  .tab td{border:0;padding:0}
+  .tab td:nth-child(1){grid-column:1/-1}
+  .tab td:nth-child(2){color:var(--mut);font-size:.92rem;align-self:center}
+}
+.uwaga{margin-top:22px;color:var(--mut);font-size:.95rem;max-width:70ch}
+.pokrewne{display:flex;flex-wrap:wrap;gap:10px}
+.pokrewne a{display:inline-block;padding:10px 16px;background:#fff;border:1px solid var(--line);border-radius:0 0 0 12px;text-decoration:none;font-weight:700;font-size:.95rem}
+.pokrewne a:hover{border-color:var(--ink)}
+/* artykul */
+.art{display:grid;gap:clamp(30px,4vw,80px);align-items:start}
+@media (min-width:1000px){.art{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}}
+.tresc{max-width:72ch}
+.tresc h2{font-size:clamp(23px,1.8vw,32px);margin:clamp(30px,3vw,46px) 0 12px}
+.tresc p{color:#2b2e33}
+.tresc p+p{margin-top:14px}
+.tresc ul{list-style:none;padding:0;margin:14px 0 0}
+.tresc li{position:relative;padding:6px 0 6px 30px}
+.tresc li::before{content:"";position:absolute;left:0;top:.95em;width:16px;height:7px;background:var(--amber);border-radius:0 0 0 7px}
+.tresc .wstep{font-size:clamp(18px,1.15vw,22px);color:var(--ink)}
+.meta{font-size:.9rem;color:var(--mut);margin-top:14px}
+.boks{position:sticky;top:calc(var(--hh) + 20px);background:var(--dark);color:#fff;padding:clamp(22px,2vw,34px);border-radius:var(--r)}
+.boks h2{font-size:clamp(22px,1.6vw,28px)}
+.boks p{color:#c9ccd1;margin:12px 0 20px}
+.boks .btn{width:100%}
+.boks .tel-b{display:block;margin-top:14px;font-weight:800;font-size:1.3rem;text-decoration:none;text-align:center}
+/* FAQ */
+.faq{border-bottom:1px solid var(--line);max-width:900px}
+.faq details{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 48px 20px 0;font-weight:800;font-size:clamp(17px,1.15vw,21px);position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:6px;top:50%;width:18px;height:8px;margin-top:-4px;background:var(--amber);border-radius:0 0 0 8px;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(90deg)}
+.faq details p{padding:0 0 22px;color:#33373c;max-width:70ch}
+section.bez-gory{padding-top:0}
+section:not(.szary)>.wrap>.kont form.pokaz{box-shadow:0 0 0 1px var(--line)}
+@media (max-width:899px){.ph figure.znak{display:none}}
+
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://adves.pl/#firma", "name": "ADVES - meble metalowe", "url": "https://adves.pl/", "telephone": "+48602104463", "email": "adves@adves.pl", "foundingDate": "2018", "taxID": "8821391951", "logo": "https://adves.pl/logo.png", "address": {"@type": "PostalAddress", "streetAddress": "ul. Orzechowa 5", "postalCode": "58-200", "addressLocality": "Dzierżoniów", "addressCountry": "PL"}, "areaServed": "PL", "description": "Metalowe szafy BHP, aktowe i kartotekowe, meble szkolne, medyczne i warsztatowe, regały magazynowe. Wycena na zapytanie, dostawa w całej Polsce."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "ADVES - meble metalowe", "url": "https://adves.pl/", "inLanguage": "pl-PL"}</script>
 </head>
-<body>
-<a class="skip" href="#oferta">Przejdź do treści</a>
+<body class="dom">
+<a class="skip" href="#tresc">Przejdź do treści</a>
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="ADVES - meble metalowe, strona główna">
+    <a class="logo" href="./">
       <svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 0h40v8H8a8 8 0 0 1-8-8z" fill="currentColor"/><path d="M0 11h40v8H8a8 8 0 0 1-8-8z" fill="#666"/><path d="M0 22h40v8H8a8 8 0 0 1-8-8z" fill="#ffbd4a"/></svg>
       <span><b>ADVES</b><small>Meble metalowe</small></span>
     </a>
     <nav class="menu" aria-label="Menu główne">
       <a href="#oferta">Oferta</a>
       <a href="#express">Express 72H</a>
-      <a href="#konfiguracja">Konfiguracja</a>
-      <a href="#dla-kogo">Dla kogo</a>
+      <a href="poradnik/">Poradnik</a>
       <a href="#o-nas">O nas</a>
       <a href="#kontakt">Kontakt</a>
       <a class="tel" href="tel:+48602104463">602 104 463</a>
@@ -241,16 +349,15 @@ body.lb-on{overflow:hidden}
   </div>
 </header>
 
-<main>
+<main id="tresc">
 <section class="hero" aria-labelledby="h1" style="padding:0">
   <div class="drzwi" aria-hidden="true">
-    <img src="img/drzwi-1.webp" width="698" height="600" alt="" fetchpriority="high" decoding="async">
-    <img src="img/drzwi-2.webp" width="696" height="600" alt="" fetchpriority="high" decoding="async">
-    <img src="img/drzwi-3.webp" width="698" height="600" alt="" fetchpriority="high" decoding="async">
+    <img class="d1" src="img/drzwi-1.webp" width="698" height="600" alt="" loading="lazy" decoding="async">
+    <img class="d2" src="img/drzwi-2.webp" width="696" height="600" alt="" fetchpriority="high" decoding="async">
   </div>
   <div class="wrap">
     <h1 id="h1">Meble metalowe dla firm, szkół i placówek medycznych</h1>
-    <p>Szafy BHP i skrytkowe, szafy aktowe i kartotekowe, stoły warsztatowe i regały z Dzierżoniowa. Dowozimy pod wskazany adres w całej Polsce, a produkty z oznaczeniem Express 72H wysyłamy w trzy dni.</p>
+    <p>Szafy BHP i skrytkowe, szafy aktowe i kartotekowe, meble szkolne i warsztatowe z Dzierżoniowa. Każde zamówienie zaczynamy od rozmowy: doradzimy, przygotujemy wycenę i dowieziemy meble w całej Polsce.</p>
     <div class="akcje">
       <a class="btn" href="#kontakt">Zapytaj o wycenę</a>
       <a class="btn obw" href="tel:+48602104463">Zadzwoń: 602 104 463</a>
@@ -264,19 +371,20 @@ body.lb-on{overflow:hidden}
     <div class="glowa">
       <div>
         <h2 class="zn">Wszystko na swoim miejscu</h2>
-        <p class="lead">Osiem grup mebli z blachy malowanej proszkowo: od szatni dla pracowników, przez archiwum dokumentów, po pracownię szkolną i magazyn.</p>
+        <p class="lead">Meble z blachy malowanej proszkowo dla szatni, archiwów, gabinetów, szkół i magazynów. Wybierz grupę, a ofertę przygotujemy pod Twoje zamówienie.</p>
       </div>
     </div>
     <div class="kat">
-      <article><div class="fot"><img src="img/k-socjalne.webp" width="600" height="600" alt="Metalowa szafka BHP z odzieżą roboczą" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble socjalne</h3><p>Szafki BHP ubraniowe, typu L, skrytkowe, podstawy i ławki</p></div></article>
-      <article><div class="fot"><img src="img/k-biurowe.webp" width="600" height="600" alt="Metalowa szafa aktowa z segregatorami" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble biurowe</h3><p>Szafy aktowe, RODO na dokumenty niejawne, na plany i mapy, witrynowe</p></div></article>
-      <article><div class="fot"><img src="img/k-kartotekowe.webp" width="450" height="600" alt="Szafa kartotekowa z wysuniętą szufladą" loading="lazy" decoding="async"></div><div class="tx"><h3>Szafy kartotekowe</h3><p>Formaty A4, A5, A6, teczki zawieszkowe, karty osobowe</p></div></article>
-      <article><div class="fot"><img src="img/k-medyczne.webp" width="600" height="600" alt="Przeszklona szafa medyczna" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble medyczne</h3><p>Szafy medyczne i kartotekowe do kopert B5 na karty pacjenta</p></div></article>
-      <article><div class="fot"><img src="img/k-szkolne.webp" width="600" height="600" alt="Pomarańczowa szafa skrytkowa szkolna" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble szkolne</h3><p>Szafy skrytkowe i ubraniowe do szatni szkolnych i przedszkolnych</p></div></article>
-      <article><div class="fot"><img src="img/k-warsztatowe.webp" width="600" height="600" alt="Stół warsztatowy z szufladami" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble warsztatowe</h3><p>Stoły 2- i 3-modułowe, szafy i szafki, wózki, ścianki narzędziowe</p></div></article>
-      <article><div class="fot"><img src="img/k-regaly.webp" width="600" height="600" alt="Metalowe regały półkowe" loading="lazy" decoding="async"></div><div class="tx"><h3>Regały magazynowe</h3><p>Półkowe na dokumenty, paletowe, wspornikowe, na szpule i bębny</p></div></article>
-      <article><div class="fot"><img src="img/k-rusztowania.webp" width="300" height="300" alt="Aluminiowe rusztowanie jezdne" loading="lazy" decoding="async"></div><div class="tx"><h3>Rusztowania jezdne</h3><p>Rusztowania jezdne Krause, podesty, pojemniki na piasek i sól</p></div></article>
+      <a class="karta" href="meble-socjalne/"><div class="fot"><img src="img/k-socjalne-300.webp" srcset="img/k-socjalne-300.webp 300w, img/k-socjalne.webp 600w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="600" height="600" alt="Metalowa szafka BHP z odzieżą roboczą" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble socjalne</h3><p>Szafki BHP ubraniowe, typu L, skrytkowe, podstawy i ławki</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="meble-biurowe/"><div class="fot"><img src="img/k-biurowe-300.webp" srcset="img/k-biurowe-300.webp 300w, img/k-biurowe.webp 600w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="600" height="600" alt="Metalowa szafa aktowa z segregatorami" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble biurowe</h3><p>Szafy aktowe, RODO na dokumenty niejawne, na plany i mapy, witrynowe</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="szafy-kartotekowe/"><div class="fot"><img src="img/k-kartotekowe-300.webp" srcset="img/k-kartotekowe-300.webp 300w, img/k-kartotekowe.webp 450w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="450" height="600" alt="Szafa kartotekowa z wysuniętą szufladą" loading="lazy" decoding="async"></div><div class="tx"><h3>Szafy kartotekowe</h3><p>Formaty A4, A5, A6, teczki zawieszkowe, karty osobowe</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="meble-medyczne/"><div class="fot"><img src="img/k-medyczne-300.webp" srcset="img/k-medyczne-300.webp 300w, img/k-medyczne.webp 600w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="600" height="600" alt="Przeszklona szafa medyczna" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble medyczne</h3><p>Szafy medyczne i kartotekowe do kopert B5 na karty pacjenta</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="meble-szkolne/"><span class="nowe">Nowe w ofercie</span><div class="fot"><img src="img/k-szkolne-300.webp" srcset="img/k-szkolne-300.webp 300w, img/k-szkolne.webp 600w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="600" height="600" alt="Pomarańczowa szafa skrytkowa do szatni szkolnej" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble szkolne</h3><p>Szatnie szkolne i przedszkolne, wyposażenie szkół na zapytanie</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="krzesla/"><span class="nowe">Nowe w ofercie</span><div class="fot znak"><svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 0h40v8H8a8 8 0 0 1-8-8z" fill="#151515"/><path d="M0 11h40v8H8a8 8 0 0 1-8-8z" fill="#666"/><path d="M0 22h40v8H8a8 8 0 0 1-8-8z" fill="#ffbd4a"/></svg></div><div class="tx"><h3>Krzesła</h3><p>Krzesła do szkół, biur i zakładów pracy, modele dobierane na zapytanie</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="meble-warsztatowe/"><div class="fot"><img src="img/k-warsztatowe-300.webp" srcset="img/k-warsztatowe-300.webp 300w, img/k-warsztatowe.webp 600w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="600" height="600" alt="Stół warsztatowy z szufladami" loading="lazy" decoding="async"></div><div class="tx"><h3>Meble warsztatowe</h3><p>Stoły 2- i 3-modułowe, szafy i szafki, wózki, ścianki narzędziowe</p><span class="dalej">Zobacz</span></div></a>
+      <a class="karta" href="regaly-magazynowe/"><div class="fot"><img src="img/k-regaly-300.webp" srcset="img/k-regaly-300.webp 300w, img/k-regaly.webp 600w" sizes="(min-width:1600px) 11vw, (min-width:900px) 22vw, 44vw" width="600" height="600" alt="Metalowe regały półkowe" loading="lazy" decoding="async"></div><div class="tx"><h3>Regały magazynowe</h3><p>Półkowe na dokumenty, paletowe, wspornikowe, na szpule i bębny</p><span class="dalej">Zobacz</span></div></a>
     </div>
+    <p class="takze">Na zapytanie także <a href="rusztowania-jezdne/">rusztowania jezdne i pojemniki na piasek i sól</a>.</p>
   </div>
 </section>
 
@@ -292,13 +400,13 @@ body.lb-on{overflow:hidden}
         <div class="strz"><button class="prev" type="button" aria-label="Poprzednie produkty">&#8592;</button><button class="next" type="button" aria-label="Następne produkty">&#8594;</button></div>
       </div>
       <div class="tor">
-        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D" href="img/p-sz00012d-800.webp"><img src="img/p-sz00012d-400.webp" width="400" height="926" alt="Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D</b><span>1800 × 600 × 490 mm</span><em class="zn72">Express 72H</em></div></article>
-        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D" href="img/p-sz00164d.webp"><img src="img/p-sz00164d.webp" width="500" height="755" alt="Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D</b><span>1800 × 800 × 490 mm</span><em class="zn72">Express 72H</em></div></article>
-        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa kartotekowa SZK 318" href="img/k-kartotekowe.webp"><img src="img/k-kartotekowe.webp" width="450" height="600" alt="Szafa kartotekowa SZK 318" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa kartotekowa SZK 318</b><span>1285 × 610 × 630 mm</span><em class="zn72">Express 72H</em></div></article>
-        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa aktowa SBM 202" href="img/p-sbm202.webp"><img src="img/p-sbm202.webp" width="418" height="482" alt="Szafa aktowa SBM 202" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa aktowa SBM 202</b><span>1990 × 800 × 435 mm</span><em class="zn72">Express 72H</em></div></article>
-        <article class="prod"><a class="lb" data-g="ex" data-alt="Podstawa do szaf socjalnych z ławką na stałe" href="img/p-podstawa.webp"><img src="img/p-podstawa.webp" width="645" height="533" alt="Podstawa do szaf socjalnych z ławką na stałe" loading="lazy" decoding="async"></a><div class="tx"><b>Podstawa do szaf socjalnych z ławką na stałe</b><span>pod szafy BHP</span><em class="zn72">Express 72H</em></div></article>
+        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D" href="img/p-sz00012d-800.webp"><img src="img/p-sz00012d-400.webp" width="400" height="926" alt="Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D</b><span>1800 × 600 × 490 mm</span><em class="zn72">Express 72H</em><a class="btn mini" href="#kontakt" data-zapytaj="Szafa ubraniowa BHP dwudrzwiowa SZ-0001-2D">Zapytaj o wycenę</a></div></article>
+        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D" href="img/p-sz00164d.webp"><img src="img/p-sz00164d.webp" width="500" height="755" alt="Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D</b><span>1800 × 800 × 490 mm</span><em class="zn72">Express 72H</em><a class="btn mini" href="#kontakt" data-zapytaj="Szafa ubraniowa BHP czterodrzwiowa typu L SZ-0016-4D">Zapytaj o wycenę</a></div></article>
+        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa kartotekowa SZK 318" href="img/k-kartotekowe.webp"><img src="img/k-kartotekowe.webp" width="450" height="600" alt="Szafa kartotekowa SZK 318" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa kartotekowa SZK 318</b><span>1285 × 610 × 630 mm</span><em class="zn72">Express 72H</em><a class="btn mini" href="#kontakt" data-zapytaj="Szafa kartotekowa SZK 318">Zapytaj o wycenę</a></div></article>
+        <article class="prod"><a class="lb" data-g="ex" data-alt="Szafa aktowa SBM 202" href="img/p-sbm202.webp"><img src="img/p-sbm202.webp" width="418" height="482" alt="Szafa aktowa SBM 202" loading="lazy" decoding="async"></a><div class="tx"><b>Szafa aktowa SBM 202</b><span>1990 × 800 × 435 mm</span><em class="zn72">Express 72H</em><a class="btn mini" href="#kontakt" data-zapytaj="Szafa aktowa SBM 202">Zapytaj o wycenę</a></div></article>
+        <article class="prod"><a class="lb" data-g="ex" data-alt="Podstawa do szaf socjalnych z ławką na stałe" href="img/p-podstawa.webp"><img src="img/p-podstawa.webp" width="645" height="533" alt="Podstawa do szaf socjalnych z ławką na stałe" loading="lazy" decoding="async"></a><div class="tx"><b>Podstawa do szaf socjalnych z ławką na stałe</b><span>pod szafy BHP</span><em class="zn72">Express 72H</em><a class="btn mini" href="#kontakt" data-zapytaj="Podstawa do szaf socjalnych z ławką na stałe">Zapytaj o wycenę</a></div></article>
       </div>
-      <div class="uwaga72"><a class="btn" href="#kontakt">Zapytaj o dostępność</a><span>Pełna lista produktów Express 72H będzie w osobnej zakładce.</span></div>
+      <div class="uwaga72"><a class="btn" href="#kontakt" data-zapytaj="produkty Express 72H">Zapytaj o dostępność</a><span>Pełna lista produktów Express 72H będzie w osobnej zakładce.</span></div>
     </div>
   </div>
 </section>
@@ -311,7 +419,7 @@ body.lb-on{overflow:hidden}
     </figure>
     <div>
       <h2 class="zn">Szafka BHP skrojona pod Twoją szatnię</h2>
-      <p class="lead">Standardowa szafa ubraniowa to punkt wyjścia. Przed zamówieniem powiedz, czego potrzebują pracownicy, a wyposażymy komorę i zamki pod Twoje warunki.</p>
+      <p class="lead">Standardowa szafa ubraniowa to punkt wyjścia. Powiedz, czego potrzebują pracownicy, a wyposażymy komorę i zamki pod Twoje warunki.</p>
       <ul class="spec">
         <li>Korpus z blachy 0,6-0,8 mm, drzwi 0,8 mm wzmocnione profilem</li>
         <li>Farba proszkowa RAL 7035 z atestem higienicznym</li>
@@ -327,7 +435,7 @@ body.lb-on{overflow:hidden}
           <a class="lb" data-g="konf" data-alt="Nóżki 15 cm pod szafę BHP" href="img/d-nozki.webp"><img src="img/d-nozki.webp" width="500" height="379" alt="Nóżki pod szafę BHP" loading="lazy" decoding="async"><span>Nóżki 15 cm</span></a>
           <a class="lb" data-g="konf" data-alt="Podstawa z ławką pod szafy BHP" href="img/d-podstawa.webp"><img src="img/d-podstawa.webp" width="600" height="500" alt="Podstawa z ławką pod szafy BHP" loading="lazy" decoding="async"><span>Podstawa z ławką</span></a>
         </div>
-        <p>A także dodatkowe półki, metalowy haczyk, lusterko i stopki poziomujące.</p>
+        <p>A także dodatkowe półki, metalowy haczyk, lusterko i stopki poziomujące. <a href="meble-socjalne/" style="font-weight:700">Zobacz szafki BHP</a></p>
       </div>
     </div>
   </div>
@@ -335,28 +443,40 @@ body.lb-on{overflow:hidden}
 
 <section id="dla-kogo" class="szary">
   <div class="wrap">
-    <div class="glowa"><div><h2 class="zn">Dla kogo pracujemy</h2><p class="lead">Wyposażamy biura, zaplecza socjalne, hale produkcyjne i warsztaty firm z całej Polski.</p></div></div>
+    <div class="glowa"><div><h2 class="zn">Dla kogo pracujemy</h2><p class="lead">Wyposażamy zakłady, biura, szkoły i przychodnie w całej Polsce. Zaopatrzeniowcy dostają od nas konkretną ofertę na zapytanie, bez szukania cen w koszyku.</p></div></div>
     <div class="kto">
       <div><h3>Zakłady i hale</h3><p>Szatnie z szafkami BHP, stoły i szafy warsztatowe, regały magazynowe i paletowe.</p></div>
-      <div><h3>Biura i archiwa</h3><p>Szafy aktowe i kartotekowe, szafy RODO na dokumenty niejawne, szafy na plany i mapy.</p></div>
-      <div><h3>Szkoły i przedszkola</h3><p>Szafki skrytkowe i ubraniowe do szatni oraz wyposażenie pracowni technicznych.</p></div>
+      <div><h3>Biura i archiwa</h3><p>Szafy aktowe i kartotekowe, szafy na dokumenty niejawne, szafy na plany i mapy.</p></div>
+      <div><h3>Szkoły i przedszkola</h3><p>Szafki skrytkowe i ubraniowe do szatni, krzesła i wyposażenie szkół na zapytanie.</p></div>
       <div><h3>Przychodnie</h3><p>Szafy medyczne i szafy kartotekowe do kopert B5 na dokumentację pacjentów.</p></div>
     </div>
     <div class="jak">
       <h3 style="font-size:clamp(24px,1.9vw,36px)">Jak wygląda zamówienie</h3>
       <ul>
-        <li><b>Doradztwo i pomiar</b>Pomożemy dobrać meble, a na życzenie zmierzymy pomieszczenie na miejscu.</li>
+        <li><b>Rozmowa i doradztwo</b>Dzwonisz albo piszesz, a my pomagamy dobrać meble. Na życzenie zmierzymy pomieszczenie na miejscu.</li>
+        <li><b>Wycena</b>Oferta dopasowana do liczby sztuk, konfiguracji i miejsca dostawy.</li>
         <li><b>Konfiguracja</b>Dostosujemy standardowe produkty do Twoich wymagań.</li>
         <li><b>Dostawa pod adres</b>Większość mebli przyjeżdża gotowa do użycia zaraz po rozpakowaniu.</li>
-        <li><b>Płatność do 14 dni</b>Dla firm i instytucji wydłużony termin płatności.</li>
-        <li><b>Certyfikat COBRABiD</b>Meble ze znakiem bezpieczeństwa „B”.</li>
-        <li><b>Atest PZH</b>Farby proszkowe z atestem higienicznym Państwowego Zakładu Higieny.</li>
+        <li><b>Płatność do 14 dni</b>Dla firm i instytucji.</li>
+        <li><b>Atest PZH i znak B</b>Farby z atestem higienicznym, meble ze znakiem bezpieczeństwa COBRABiD.</li>
       </ul>
     </div>
   </div>
 </section>
 
-<section id="o-nas">
+<section id="poradnik">
+  <div class="wrap">
+    <div class="glowa"><div><h2 class="zn">Poradnik i pytania</h2><p class="lead">Odpowiadamy na pytania, które najczęściej słyszymy od klientów. Nowe porady dodajemy na bieżąco.</p></div></div>
+    <div class="porady">
+      <a class="porada" href="poradnik/jak-dobrac-szafke-bhp/"><div class="fot"><img src="img/p-sz00012d-400.webp" width="400" height="926" alt="" loading="lazy" decoding="async"></div><div class="tx"><h3>Jak dobrać szafkę BHP do szatni pracowniczej</h3><p>Ile komór, jaka szerokość, kiedy szafa typu L, jaki zamek i które dodatki naprawdę się przydają.</p><span class="dalej">Czytaj</span></div></a>
+      <a class="porada" href="poradnik/szafy-na-dokumenty-rodo/"><div class="fot"><img src="img/k-biurowe-300.webp" width="600" height="600" alt="" loading="lazy" decoding="async"></div><div class="tx"><h3>Szafy na dokumenty a RODO: jak bezpiecznie przechowywać dane osobowe</h3><p>RODO nie wskazuje konkretnej szafy, ale wymaga odpowiednich zabezpieczeń. Podpowiadamy, co to oznacza w praktyce.</p><span class="dalej">Czytaj</span></div></a>
+      <a class="porada" href="poradnik/szatnia-w-szkole/"><div class="fot"><img src="img/k-szkolne-300.webp" width="600" height="600" alt="" loading="lazy" decoding="async"></div><div class="tx"><h3>Szatnia w szkole i przedszkolu: szafki skrytkowe czy ubraniowe?</h3><p>Skrytkowe czy ubraniowe, jakie zamki, po co ławki i jak przygotować zamówienie do zapytania ofertowego.</p><span class="dalej">Czytaj</span></div></a>
+    </div>
+    <a class="link-wiecej" href="poradnik/">Wszystkie porady i pytania</a>
+  </div>
+</section>
+
+<section id="o-nas" class="szary">
   <div class="wrap onas">
     <figure>
       <a class="lb" data-g="onas" data-alt="Daisy, biszkoptowa goldenka z zespołu ADVES" href="img/daisy-1200.webp"><img src="img/daisy-700.webp" srcset="img/daisy-700.webp 700w, img/daisy-1200.webp 1200w" sizes="(min-width:1000px) 46vw, 100vw" width="1200" height="675" alt="Daisy, biszkoptowa goldenka z zespołu ADVES" loading="lazy" decoding="async"></a>
@@ -364,16 +484,15 @@ body.lb-on{overflow:hidden}
     </figure>
     <div class="txt">
       <h2 class="zn">Meble metalowe to nasza pasja</h2>
-      <p class="lead" style="margin-bottom:18px">Działamy od 2018 roku w Dzierżoniowie i dostarczamy meble metalowe firmom z całej Polski.</p>
-      <p>Zajmujemy się kompleksowo: doradzamy przy wyborze, dopasowujemy standardowe produkty do indywidualnych potrzeb i dowozimy je pod wskazany adres. Oferujemy szafy, stoły i regały, a także rusztowania jezdne, podesty i drabiny aluminiowe.</p>
-      <p>Najważniejsze jest dla nas zadowolenie klienta, dlatego każde zamówienie prowadzimy indywidualnie, od pierwszej rozmowy aż po dostawę.</p>
+      <p class="lead" style="margin-bottom:18px">Działamy od 2018 roku w Dzierżoniowie i dostarczamy meble metalowe firmom i instytucjom z całej Polski.</p>
+      <p>Zajmujemy się zamówieniem kompleksowo: doradzamy przy wyborze, dopasowujemy standardowe produkty do indywidualnych potrzeb i dowozimy je pod wskazany adres.</p>
+      <p>Nie prowadzimy sklepu z koszykiem, bo najlepsze zamówienia powstają w rozmowie. Każde prowadzimy indywidualnie, od pierwszego telefonu aż po dostawę.</p>
     </div>
   </div>
 </section>
-
-<section id="kontakt" class="szary">
+<section id="kontakt" class="">
   <div class="wrap">
-    <div class="glowa"><div><h2 class="zn">Zapytaj o wycenę</h2><p class="lead">Napisz, jakich mebli potrzebujesz i ile sztuk. Przygotujemy ofertę dopasowaną do Twojego zamówienia.</p></div></div>
+    <div class="glowa"><div><h2 class="zn">Zapytaj o wycenę</h2><p class="lead">Napisz, jakich mebli potrzebujesz i ile sztuk. Przygotujemy ofertę dopasowaną do Twojego zamówienia, a jeśli wolisz rozmowę, zadzwoń.</p></div></div>
     <div class="kont">
       <form class="pokaz" novalidate>
         <div class="pole"><label for="f-im">Imię, nazwisko / firma</label><input id="f-im" name="imie" autocomplete="name" required></div>
@@ -381,7 +500,7 @@ body.lb-on{overflow:hidden}
         <div class="pole cale"><label for="f-em">E-mail</label><input id="f-em" name="email" type="email" autocomplete="email" required></div>
         <div class="pole cale"><label for="f-wi">Czego potrzebujesz?</label><textarea id="f-wi" name="wiadomosc" required placeholder="np. 20 szafek BHP dwudrzwiowych z ławkami, dostawa do Wrocławia"></textarea></div>
         <button class="btn cz" type="submit">Wyślij zapytanie</button>
-        <p class="info">Odpowiadamy na zapytania tak szybko, jak to możliwe.</p>
+        <p class="info">Odpowiadamy z wyceną, a w razie pytań oddzwaniamy.</p>
         <p class="msg" hidden tabindex="-1">To jest podgląd strony - na docelowej stronie formularz wyśle zapytanie do ADVES.</p>
       </form>
       <div class="dane">
@@ -401,20 +520,19 @@ body.lb-on{overflow:hidden}
   </div>
 </section>
 </main>
-
 <footer>
   <div class="wrap">
     <div>
-      <a class="logo" href="#" aria-label="ADVES, do góry strony"><svg viewBox="0 0 40 30" aria-hidden="true" width="38" height="30"><path d="M0 0h40v8H8a8 8 0 0 1-8-8z" fill="#fff"/><path d="M0 11h40v8H8a8 8 0 0 1-8-8z" fill="#8a8a8a"/><path d="M0 22h40v8H8a8 8 0 0 1-8-8z" fill="#ffbd4a"/></svg><span><b style="margin:0">ADVES</b><small>Meble metalowe</small></span></a>
+      <a class="logo" href="./"><svg viewBox="0 0 40 30" aria-hidden="true" width="38" height="30"><path d="M0 0h40v8H8a8 8 0 0 1-8-8z" fill="#fff"/><path d="M0 11h40v8H8a8 8 0 0 1-8-8z" fill="#8a8a8a"/><path d="M0 22h40v8H8a8 8 0 0 1-8-8z" fill="#ffbd4a"/></svg><span><b style="margin:0">ADVES</b><small>Meble metalowe</small></span></a>
+      <p style="margin-top:14px;max-width:36ch">Meble metalowe dla firm, szkół i placówek medycznych. Dzierżoniów, dostawy w całej Polsce.</p>
     </div>
-    <div><b>Oferta</b><a href="#oferta">Meble metalowe</a><br><a href="#express">Express 72H</a><br><a href="#konfiguracja">Konfiguracja szafek</a></div>
-    <div><b>Firma</b><a href="#o-nas">O nas</a><br><a href="#dla-kogo">Dla kogo</a><br><a href="#kontakt">Kontakt</a></div>
-    <div><b>Kontakt</b><a href="tel:+48602104463">602 104 463</a><br><a href="mailto:adves@adves.pl">adves@adves.pl</a><br>Dzierżoniów</div>
+    <div><b>Oferta</b><a href="meble-socjalne/">Meble socjalne</a><br><a href="meble-biurowe/">Meble biurowe</a><br><a href="szafy-kartotekowe/">Szafy kartotekowe</a><br><a href="meble-medyczne/">Meble medyczne</a><br><a href="meble-szkolne/">Meble szkolne</a></div>
+    <div><b>&nbsp;</b><a href="krzesla/">Krzesła</a><br><a href="meble-warsztatowe/">Meble warsztatowe</a><br><a href="regaly-magazynowe/">Regały magazynowe</a><br><a href="#express">Express 72H</a></div>
+    <div><b>Firma</b><a href="poradnik/">Poradnik i pytania</a><br><a href="#o-nas">O nas</a><br><a href="tel:+48602104463">602 104 463</a><br><a href="mailto:adves@adves.pl">adves@adves.pl</a></div>
     <div class="dol"><span>© <span class="rok">2026</span> ADVES - meble metalowe</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=adves.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
 </div>
   </div>
 </footer>
-
 <dialog id="lb" aria-label="Podgląd zdjęcia">
   <div class="lb-in"><img alt=""></div>
   <p></p>
